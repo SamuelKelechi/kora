@@ -1,0 +1,140 @@
+.Page1Container{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.Page1Wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page1Form{
+    width: 50%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Page1FormWrap{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Image{
+    width: 50%;
+    background-color: whitesmoke;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.Page1LogoHold{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #049EFF;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+.Logo{
+    height: 30px;
+}
+
+.NextHold{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.IconHold{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.ImgInput{
+    width: 120px;
+    height: 35px;
+    background-color: #47B7FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type='file']{
+    display: none;
+    width: 120px;
+    height: 35px;
+}
+
+.Holder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.Holder > input{
+    height: 40px;
+    outline: none;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.Holder > label{
+    margin-bottom: 3px;
+    font-weight: 450;
+    margin-left: 5px;
+}
+
+.Btn1{
+    background-color: #47B7FF;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 120px;
+    height: 35px;
+}
+
+
+@media screen and (max-width: 768px){
+    .Image{
+        display: none;
+    }
+    .Page1Form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .Page1Form{
+        width: 90%;
+    }
+    .Page1Wrapper{
+        width: 100%;
+    }
+    .Page1FormWrap{
+        width: 90%;
+    }
+}

@@ -1,0 +1,170 @@
+.Page1Container{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.Page1Wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page1Form{
+    width: 50%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Page1FormWrap{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Image{
+    width: 50%;
+    background-color: whitesmoke;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.Page1LogoHold{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #049EFF;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+.Logo{
+    height: 30px;
+}
+
+.NextHold{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.Btn1{
+    background-color: #47B7FF;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 120px;
+    height: 35px;
+}
+
+
+@media screen and (max-width: 768px){
+    .Image{
+        display: none;
+    }
+    .Page1Form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .Page1Form{
+        width: 90%;
+    }
+    .Page1Wrapper{
+        width: 100%;
+    }
+    .Page1FormWrap{
+        width: 90%;
+    }
+}
+
+.ButtonsHold{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Btn2{
+    background-color: whitesmoke;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 120px;
+    height: 35px;
+}
+
+.SectionHold{
+    width: 100%;
+}
+
+.StackHold {
+    height: 150px;
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.SectHold{
+    height: 120px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.SectHold > textarea{
+    height: 70%;
+    width: 97%;
+    border: none;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    padding: 15px 0 0 12px;
+    outline: none;
+}
+
+.SectHold2{
+    height: 120px;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.SectHold2 > textarea{
+    height: 85%;
+    width: 97%;
+    border: none;
+    background-color: whitesmoke;
+    padding: 15px 0 0 12px;
+    outline: none;
+    margin-top: 5px;
+}
+
+.Bottom{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.Bottom > span{
+    color: #47B7FF;
+    cursor: pointer;
+}
