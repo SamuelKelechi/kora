@@ -30,10 +30,10 @@ export class Page1 extends Component {
                             <CgProfile fontSize={70} color='grey'/>
                         </div>
 
-                        <div className='ImgInput'>
+                        <label htmlFor='img' className='ImgInput'>
                             Upload Photo
-                            <input type='file' />
-                        </div>
+                            <input id='img' type='file' className='Images'/>
+                        </label>
 
                         <div className='Holder'>
                             <label>First Name</label>

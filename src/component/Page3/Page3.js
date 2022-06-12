@@ -1,10 +1,24 @@
-import React, { Component, useState } from 'react';
+import React, { Component} from 'react';
 import './Page3.css';
 import Cover from '../Images/cover.png';
 import Logo from '../Images/kora.png';
 import Stepper from '../Stepper/Stepper';
+import { Switch } from '@mui/material';
 
 export class Page3 extends Component {
+
+    constructor(props){
+        super(props)
+        this.toggleDisplay=this.toggleDisplay.bind(this)
+
+        this.state={
+            display:true
+        }
+    }
+
+    toggleDisplay(){
+        this.setState({display: !this.state.display})
+    }
 
     continue = e => {
        e.preventDefault();
@@ -15,6 +29,8 @@ export class Page3 extends Component {
        e.preventDefault();
        this.props.prevStep();
     }
+
+
   render() {
       const {values, handleChange} = this.props;
 
@@ -39,6 +55,7 @@ export class Page3 extends Component {
                                         onChange={handleChange('interest')}
                                         defaultValue={values.interest}
                                         name='interest'
+                                        value='Backend Development'
                                     />Backend Development
                                 </span>
 
@@ -47,6 +64,7 @@ export class Page3 extends Component {
                                         onChange={handleChange('interest')}
                                         defaultValue={values.interest}
                                         name='interest'
+                                        value='Frontend Development'
                                     />Frontend Development
                                 </span>
 
@@ -55,6 +73,7 @@ export class Page3 extends Component {
                                         onChange={handleChange('interest')}
                                         defaultValue={values.interest}
                                         name='interest'
+                                        value='Product Design'
                                     />Product Design
                                 </span>
                             </div>
@@ -79,10 +98,11 @@ export class Page3 extends Component {
                         </div>
 
                         <div className='Bottom'>
-                           <input type='checkbox' 
-                                onChange={handleChange('agree')}
-                                defaultValue={values.agree}
-                           /> 
+                        
+                        <Switch 
+                            onClick={this.toggleDisplay}
+                        />
+
                            I agree to Kora Academy <span>Terms and conditions</span>
                         </div>
 
@@ -93,9 +113,17 @@ export class Page3 extends Component {
                                 Back
                             </button>
 
-                            <button className='Btn1' disabled={!this.agree}>
-                                Continue
-                            </button>
+                        {
+                        this.state.display ? (
+                        <button className='Disable'>
+                            Continue
+                        </button>
+                    ) :  (
+                        <button className='Btn1'
+                            onClick={this.continue}>
+                            Continue
+                        </button>)  
+                        }
                         </div>
 
                     </div>

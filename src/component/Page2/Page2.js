@@ -68,7 +68,7 @@ export class Page2 extends Component {
                         <div className='Holder'>
                             <label>Hobbies</label>
                             <input 
-                                placeholder='Street/City/State'
+                                placeholder='Hobbies'
                                 onChange={handleChange('hobbies')}
                                 defaultValue={values.hobbies}
                             />

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Page1 from '../Page1/Page1';
 import Page2 from '../Page2/Page2';
 import Page3 from '../Page3/Page3';
+import ConfirmPage from '../Confirm/ConfirmPage';
+import Success from '../Feedback/Success'
+
 
 export class Admission extends Component {
   state = {
@@ -22,7 +25,6 @@ export class Admission extends Component {
     stack: '',
     whystack: '',
     whyconsider: '',
-    agree: ''
   }
 
   // Next step proceed
@@ -48,8 +50,8 @@ export class Admission extends Component {
 
   render() {
     const {step} = this.state;
-    const {avatar, firstname, lastname, email, phone, address, gender, occupation, state, lga, education, hobbies, age, stack, whystack, whyconsider, agree} = this.state;
-    const values = {avatar, firstname, lastname, email, phone, address, gender, occupation, state, lga, education, hobbies, age, stack, whystack, whyconsider, agree}
+    const {avatar, firstname, lastname, email, phone, address, gender, occupation, state, lga, education, hobbies, age, stack, whystack, whyconsider} = this.state;
+    const values = {avatar, firstname, lastname, email, phone, address, gender, occupation, state, lga, education, hobbies, age, stack, whystack, whyconsider}
   
     switch(step) {
       case 1:
@@ -78,6 +80,18 @@ export class Admission extends Component {
             prevStep={this.prevStep}
             />
           )
+        case 4:
+          return (
+            <ConfirmPage 
+            nextStep={this.nextStep}
+            values={values}
+            prevStep={this.prevStep}
+            />
+          )
+          case 5:
+            return <Success />
+            
+        default: 
     }
   }
 }
